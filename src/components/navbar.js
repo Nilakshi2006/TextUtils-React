@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-export default function Navbar({ title, aboutText = 'About the title' }) {
+export default function Navbar({ title, aboutText = 'About' }) {
   return (
     
 <>
