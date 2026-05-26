@@ -53,7 +53,7 @@ setText(newText.join(" "))
         <h1>{props.heading}</h1>
 <div className="mb-3">
 
-  <textarea className="form-control" value={text} id="myBox" rows="8" onChange={handleOnChange}></textarea>
+  <textarea className="form-control my -2" value={text} id="myBox" rows="8" onChange={handleOnChange}></textarea>
 </div>
     <button className="btn btn-primary mx-2" onClick={handleUpClick}>Convert to Uppercase</button>
     <button className="btn btn-primary mx-2" onClick={handleLoClick}>Convert to Lowercase</button>
