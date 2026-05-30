@@ -31,13 +31,21 @@ setText(newText.join(" "))
       setText(newText)
     }
 
+
     const handleRemoveDuplicateWordsClick=()=>{
       const newText=text.split(" ") //to split the text into words
       const uniqueWords=[...new Set(newText)] //to remove duplicate words
       setText(uniqueWords.join(" "))
     }
 
-    
+
+   const handleCopy = () => {
+  var text = document.getElementById("myBox")
+  text.select()
+  navigator.clipboard.writeText(text.value)
+}
+
+
   const handleOnChange=(event)=>{
     // console.log("on Change was clicked")
     setText(event.target.value) //event.target.value is the text which is being typed in textarea
@@ -61,6 +69,7 @@ setText(newText.join(" "))
     <button className="btn btn-primary mx-2" onClick={handleRemoveExtraSpacesClick}>Remove Extra Spaces</button>
 <button className="btn btn-primary mx-2" onClick={handleReverseClick}>Reverse Text</button>
 <button className="btn btn-primary mx-2" onClick={handleRemoveDuplicateWordsClick}>Remove Duplicate Words</button>
+   <button className="btn btn-primary mx-2" onClick={handleCopy}>Copy Text</button>
     </div>
 
     <div className="container">
