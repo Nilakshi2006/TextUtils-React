@@ -65,10 +65,10 @@ setText(newText.join(" "))
 </div>
     <button className="btn btn-primary mx-2" onClick={handleUpClick}>Convert to Uppercase</button>
     <button className="btn btn-primary mx-2" onClick={handleLoClick}>Convert to Lowercase</button>
-    <button className="btn btn-primary mx-2" onClick={handleClearClick}>Clear Text</button>
     <button className="btn btn-primary mx-2" onClick={handleRemoveExtraSpacesClick}>Remove Extra Spaces</button>
 <button className="btn btn-primary mx-2" onClick={handleReverseClick}>Reverse Text</button>
 <button className="btn btn-primary mx-2" onClick={handleRemoveDuplicateWordsClick}>Remove Duplicate Words</button>
+    <button className="btn btn-primary mx-2" onClick={handleClearClick}>Clear Text</button>
    <button className="btn btn-primary mx-2" onClick={handleCopy}>Copy Text</button>
     </div>
 
