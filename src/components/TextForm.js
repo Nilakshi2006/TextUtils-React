@@ -56,12 +56,12 @@ setText(newText.join(" "))
     
     return (
     <>
-    <div className="container">
-    
+   
+     <div className="container" style={{ color: props.mode === 'dark' ? 'white' : '#042743' }}>
         <h1>{props.heading}</h1>
 <div className="mb-3">
 
-  <textarea className="form-control my -2" value={text} id="myBox" rows="8" onChange={handleOnChange}></textarea>
+  <textarea className="form-control my-2" value={text} id="myBox" rows="8" onChange={handleOnChange} style={{backgroundColor:props.mode==='light'? 'white' : 'grey', color: props.mode === 'dark' ? 'white' : '#042743'}} ></textarea>
 </div>
     <button className="btn btn-primary mx-2" onClick={handleUpClick}>Convert to Uppercase</button>
     <button className="btn btn-primary mx-2" onClick={handleLoClick}>Convert to Lowercase</button>
@@ -72,12 +72,12 @@ setText(newText.join(" "))
    <button className="btn btn-primary mx-2" onClick={handleCopy}>Copy Text</button>
     </div>
 
-    <div className="container">
+    <div className="container" style={{ color: props.mode === 'dark' ? 'white' : '#042743' }}>
       <h1>Your text Summary</h1>
       <p>{text.split(" ").length} words and {text.length} characters</p>
       <p>{0.08 * text.split(" ").length} minutes to read</p>
       <h2>Preview</h2>
-      {text}
+      {text.length>0?text:"Enter something in the textbox above to preview it here"}
     </div>
     </>
   )
