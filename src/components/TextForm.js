@@ -8,27 +8,32 @@ export default function TextForm(props) {
  const newText=text.toUpperCase() //to convert text to uppercase
  setText(newText)
     // setText("You have clicked on Convert to Uppercase")//coreect way to chnage the state
+ props.showAlert("Converted to Uppercase!", "success");
   }
 
   const handleLoClick=()=>{
 const newText=text.toLowerCase() //to convert text to lowercase
  setText(newText)
+props.showAlert("Converted to Lowercase!", "success");
   }
 
 
     const handleClearClick=()=>{
       const newText='' //to clear the text
       setText(newText)
+      props.showAlert("Text Cleared!", "success");
     }
 
     const handleRemoveExtraSpacesClick=()=>{
       const newText=text.split(/[ ]+/) //to remove extra spaces
 setText(newText.join(" "))
+props.showAlert("Extra spaces removed!", "success");
     }
 
     const handleReverseClick=()=>{
       const newText=text.split("").reverse().join("") //to reverse the text
       setText(newText)
+      props.showAlert("Text reversed!","success")
     }
 
 
@@ -36,6 +41,7 @@ setText(newText.join(" "))
       const newText=text.split(" ") //to split the text into words
       const uniqueWords=[...new Set(newText)] //to remove duplicate words
       setText(uniqueWords.join(" "))
+      props.showAlert("Duplicate words removed","success")
     }
 
 
@@ -43,6 +49,7 @@ setText(newText.join(" "))
   var text = document.getElementById("myBox")
   text.select()
   navigator.clipboard.writeText(text.value)
+  props.showAlert("Text Copied to Clipboard!", "success")
 }
 
 
