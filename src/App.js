@@ -24,10 +24,24 @@ function App() {
       setMode('dark');
       document.body.style.backgroundColor = '#042743';
       showAlert("Dark mode has been enabled", "success");
+      document.title = 'TextUtils - Dark Mode';
+
+//         setTimeout(() => {
+//         document.title = 'TextUtils is Amazing';
+//       }, 2000);
+// setTimeout(() => {
+//         document.title = 'Install TextUtils Now';
+//       }, 1500);
+
+// this timeout is just for understanding purpose, it is not a good practice to change title like this, it can be irritating for user
+
+
     } else {
       setMode('light');
       document.body.style.backgroundColor = 'White';
       showAlert("Light mode has been enabled", "success");
+      document.title='TextUtils - Light Mode';
+
     }
   };
   return (
